@@ -1,0 +1,110 @@
+@import '/src/assets/vars'
+
+.footer
+  &__top
+    padding: 29px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media (max-width: 600px)
+      flex-direction: column
+      align-items: flex-start
+
+  &__info
+    display: flex
+    align-items: center
+
+    @media (max-width: 600px)
+      flex-direction: column
+      margin-bottom: 25px
+      align-items: flex-start
+
+  &__text
+    font-size: 14px
+    line-height: 25px
+    color: $dark-grey
+    display: block
+    margin-left: 30px
+
+    @media (max-width: 600px)
+      flex-direction: column
+      margin-top: 30px
+      margin-left: 0
+
+  &__links
+    display: flex
+    align-items: center
+
+  &__link
+    width: 48px
+    height: 48px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+
+    &:not(:last-child)
+      margin-right: 20px
+
+  &__rules
+    border-top: $light-grey
+    display: flex
+    align-items: center
+    padding: 20px 0
+
+    @media (max-width: 600px)
+      flex-wrap: wrap
+
+  &__rules-item
+    font-size: 14px
+    line-height: 25px
+    color: $dark-grey
+    position: relative
+
+    &:not(:first-child)
+      padding-left: 12px
+
+      &::after
+        content: '|'
+        position: absolute
+        left: 4px
+        top: 0
+
+    @media (max-width: 600px)
+      font-size: 12px
+      &:last-child
+        display: none
+
+      &:first-child
+        width: 100%
+
+      &:nth-child(2)
+        padding-left: 0
+        flex-shrink: 0
+
+        &::after
+          display: none
+
+  &__rules-link
+    color: $dark-grey
+
+  &__bottom
+    padding: 20px 0 22px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $light-grey
+
+    span
+      font-size: 14px
+      line-height: 25px
+      color: $grey
+
+.logo
+  flex-shrink: 0
+  display: flex
+  align-items: center
+
+.logo__text
+  margin-left: 8px
