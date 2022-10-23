@@ -1,0 +1,46 @@
+@import '/src/assets/vars'
+
+.partners
+  padding: 70px 0 90px
+
+  &__title
+    @extend %Poppins-600
+    font-size: 33px
+    line-height: 53px
+    color: $black
+    max-width: 846px
+    text-align: center
+    margin: 0 auto 63px
+
+    span
+      @extend %Poppins-700
+      color: $purple
+
+    @media (max-width: 600px)
+      font-size: 28px
+      line-height: 45px
+
+    @media (max-width: 420px)
+      font-size: 24px
+      line-height: 38px
+      margin-bottom: 58px
+
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+
+    @media (max-width: 700px)
+      flex-wrap: wrap
+      justify-content: space-between
+
+  &__list-item
+    img
+      object-fit: cover
+    @media (max-width: 700px)
+      &:nth-child(3n)
+        width: 100%
+        img
+          margin: 20px auto 30px
+          width: 132px
+          height: 44px
