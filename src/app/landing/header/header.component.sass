@@ -1,0 +1,177 @@
+@import '/src/assets/vars'
+
+.header
+  padding: 33px 0
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__burger
+    width: 16px
+    height: 16px
+    margin-left: 20px
+    position: relative
+    z-index: 50
+    display: none
+    padding: 0
+    border: none
+    background-color: transparent
+
+    // @media (max-width: 600px)
+    //   display: block
+
+  &__burger-line
+    display: block
+    width: 16px
+    height: 1px
+    background-color: $black
+
+    &:not(:last-child)
+      margin-bottom: 3px
+
+  &__burger-line--hide
+    display: none
+
+  &__burger-close
+    display: none
+
+  &__burger-close--visible
+    display: block
+
+.logo
+  width: 150px
+  height: 34px
+  position: relative
+  z-index: 50
+  display: flex
+  align-items: center
+
+  &__text
+    margin-left: 8px
+    @media (max-width: 600px)
+      display: none
+
+  &__text--visible
+    display: block
+
+.menu
+  display: flex
+  align-items: center
+  margin: 0
+  padding: 0
+
+  &__link
+    font-size: 16px
+    line-height: 25px
+    color: $dark-grey
+    &:not(:last-child)
+      margin-right: 32px
+
+      @media (max-width: 600px)
+        margin-right: 0
+        margin-bottom: 21px
+
+        &:last-child
+          margin-bottom: 29px
+
+    @media (max-width: 600px)
+      font-weight: 600
+      color: $black
+
+      &:last-child
+        margin-bottom: 29px
+
+  &__btn
+    width: 123px
+    height: 40px
+    background-color: $purple
+    border-radius: 8px
+    @extend %Poppins-400
+    font-size: 14px
+    color: $light-grey
+    margin-left: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    svg
+      display: none
+      margin-left: 10px
+
+    @media (max-width: 600px)
+      margin-left: 0
+      width: 171px
+      height: 64px
+      margin-bottom: 32px
+
+      svg
+        display: block
+
+  &__btn--mobile
+    display: none
+    width: 123px
+    height: 40px
+    margin-bottom: 0
+    margin-left: auto
+    flex-shrink: 0
+
+    @media (max-width: 600px)
+      display: flex
+
+  &__box
+    display: none
+    // display: flex
+    align-items: center
+
+  @media (max-width: 600px)
+    position: absolute
+    top: -300px
+    left: 8px
+    right: 8px
+    background: $light-grey
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1)
+    border-radius: 16px
+    height: 296px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+
+  &--mobile
+    @media (max-width: 600px)
+      top: 8px
+
+.last-news
+  margin-top: 11px
+
+  &__inner
+    background-color: $black
+    border-radius: 16px
+    padding: 19px 24px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__info
+    color: $white
+    margin-right: 12px
+
+  &__title
+    @extend %Poppins-500
+    font-size: 16px
+    line-height: 25px
+    margin-bottom: 9px
+
+    @media (max-width: 600px)
+      font-size: 14px
+
+  &__text
+    @media (max-width: 600px)
+      font-size: 14px
+
+  &__btn
+    border: none
+    background-color: transparent
+    cursor: pointer
