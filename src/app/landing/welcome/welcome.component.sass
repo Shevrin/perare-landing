@@ -1,0 +1,452 @@
+body
+  box-sizing: border-box
+  font-size: 16px
+  line-height: 25px
+  display: flex
+  flex-direction: column
+  color: #E8EDF6
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 10px
+
+  @media (max-width: 600px)
+    padding: 0 24px
+
+a
+  text-decoration: none
+
+.welcome
+  padding: 72px 0 152px
+  background-image: url('/../assets/image/welcome/welcome-bg.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: bottom center
+
+  @media (max-width: 420px)
+    padding-bottom: 22px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: end
+
+    @media (max-width: 990px)
+      flex-direction: column
+      align-items: center
+
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: space-between
+    max-width: 472px
+    margin-right: 90px
+
+  @media (max-width: 990px)
+    &__info
+      max-width: 100%
+      margin-right: 0
+      margin-bottom: 50px
+
+    @media (max-width: 420px)
+      &__info
+        align-items: center
+        margin-bottom: 23px
+
+  &__title
+    // @extend %WorkSans-600
+    font-size: 68px
+    line-height: 81px
+    color: #000000
+    margin-bottom: 32px
+
+    span
+      color: #636AE6
+
+    @media (max-width: 1900px)
+      &__title
+        font-size: 50px
+        line-height: 56px
+
+    @media (max-width: 420px)
+      &__title
+        font-size: 40px
+        line-height: 50px
+        text-align: center
+        margin-bottom: 27px
+
+  &__text
+    font-size: 18px
+    line-height: 25px
+    margin-bottom: 38px
+    color: #4E6685
+
+  @media (max-width: 420px)
+    &__text
+      text-align: center
+      margin-bottom: 23px
+
+  &__btn
+    padding: 18px 33px
+    // @extend %Poppins-500
+    font-size: 18px
+    line-height: 28px
+    color: #E8EDF6
+    background-color: #636AE6
+    border-radius: 8px
+    display: flex
+    align-items: center
+    margin-bottom: 6px
+    border: none
+
+    svg
+      margin-left: 6px
+
+  @media (max-width: 420px)
+    &__btn
+      margin-bottom: 30px
+
+  &__subtext
+    font-size: 14px
+    line-height: 28px
+    color: #4E6685
+
+  &__images
+    margin-right: 56px
+    position: relative
+    flex-shrink: 0
+
+    @media (max-width: 990px)
+      &__images
+        margin: 0 56px 0 90px
+
+    @media (max-width: 600px)
+      &__images
+        margin: 0 24px 0 40px
+
+  &__content-one
+    position: absolute
+    bottom: 18px
+    left: -90px
+    padding: 0 16px 12px
+    max-width: 272px
+    width: 100%
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1)
+    border-radius: 8px
+    background-color: #ffffff
+
+    @media (max-width: 600px)
+      &__content-one
+        padding: 0 8px 8px
+        max-width: 138px
+        left: -50px
+        bottom: 10px
+
+  &__content-item
+    padding-top: 8px
+    display: flex
+    flex-direction: column
+    // @extend %Inter
+
+    &:not(:last-child)
+      border-bottom: 1px solid #E5E5E8
+      padding-bottom: 8px
+
+  @media (max-width: 600px)
+    &__content-item
+      padding-top: 2px
+
+    &:not(:last-child)
+      padding-bottom: 2px
+
+  &__content-item-name
+    font-size: 13px
+    line-height: 16px
+    color: #5E5C7D
+    margin-bottom: 4px
+
+  @media (max-width: 600px)
+    &__content-item-name
+      font-size: 8px
+      margin-bottom: 0
+      line-height: 8px
+
+  &__content-item-text
+    font-size: 14px
+    line-height: 16px
+    color: #040036
+
+  @media (max-width: 600px)
+    &__content-item-text
+      font-size: 8px
+      line-height: 8px
+
+  &__content-item-label
+    position: relative
+
+  @media (max-width: 600px)
+    &__content-item-label
+      height: 13px
+      line-height: 8px
+
+  &__content-item-input
+    padding: 0
+    border: none
+
+  @media (max-width: 600px)
+    &__content-item-input
+      font-size: 8px
+      line-height: 8px
+
+    &::placeholder
+      font-size: 8px
+
+  &__content-item-btn
+    position: absolute
+    right: 0
+    top: 0
+    padding: 0
+    border: none
+    background-color: transparent
+
+    @media (max-width: 600px)
+      &__content-item-btn
+        svg
+          width: 10px
+          height: 10px
+
+  &__content-item-link
+    font-size: 14px
+    line-height: 16px
+    color: #636AE6
+    padding-top: 4px
+
+    @media (max-width: 600px)
+      &__content-item-link
+        font-size: 8px
+        line-height: 8px
+        padding-top: 2px
+
+  &__content-two
+    position: absolute
+    padding: 12px 8px
+    max-width: 272px
+    width: 100%
+    border-radius: 8px
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1)
+    top: 38px
+    right: -56px
+    background-color: #ffffff
+    // @extend %Inter
+
+    @media (max-width: 600px)
+      &__content-two
+        padding: 8px
+        max-width: 150px
+        right: -25px
+        top: 16px
+
+  &__content-two-name,
+  &__content-two-subname
+    font-size: 14px
+    line-height: 16px
+    color: #040036
+    margin-bottom: 20px
+    display: block
+    padding: 0 8px
+
+    @media (max-width: 600px)
+      &__content-two-name,
+      &__content-two-subname
+        padding: 0 4px
+        font-size: 8px
+        margin-bottom: 6px
+        line-height: 8px
+
+  &__content-two-btns
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+    background-color: #f5f5f7
+    border-radius: 6px
+    height: 28px
+
+    @media (max-width: 600px)
+      &__content-two-btns
+        margin-bottom: 5px
+        height: 10px
+        line-height: 8px
+
+  &__content-two-btn
+    width: 50px
+    height: 24px
+    background-color: transparent
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    border-radius: 4px
+    cursor: pointer
+    border: none
+
+    @media (max-width: 600px)
+      &__content-two-btn
+        width: 20px
+        height: 10px
+        font-size: 8px
+        line-height: 8px
+
+  &__content-two-btn--active
+    background-color: #ffffff
+
+  &__content-two-subname
+    margin-bottom: 4px
+
+    @media (max-width: 600px)
+      &__content-two-subname
+        margin-bottom: 2px
+
+  &__content-two-lagi
+    padding: 0 8px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 13px
+    line-height: 16px
+    margin-bottom: 8px
+
+    span
+      color: #5E5C7D
+
+    a
+      color: #636AE6
+
+    @media (max-width: 600px)
+      &__content-two-lagi
+        margin-bottom: 4px
+        font-size: 8px
+        line-height: 8px
+        padding: 4px 0
+
+  &__content-box
+    padding: 0 8px
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      width: 206px
+      height: 18px
+      background-image: url('/../assets/image/vector/welcome-vector-1.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      top: 25px
+
+      @media (max-width: 600px)
+      &::after
+        height: 10px
+        top: 10px
+
+    &::before
+      content: ''
+      position: absolute
+      width: 206px
+      height: 37px
+      background-image: url('/../assets/image/vector/welcome-vector-2.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      top: 53px
+
+    @media (max-width: 600px)
+      &::before
+        height: 17px
+        top: 30px
+
+    @media (max-width: 600px)
+      &__content-box
+        padding: 0 4px 15px
+
+        &::after,
+        &::before
+          width: 100px
+
+  &__content-box-item
+    height: 28px
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+    &:first-child
+      border-top: 2px solid #E5E5E8
+
+  @media (max-width: 600px)
+    &__content-box-item
+      height: 15px
+
+  &__content-box-item-left
+    width: 206px
+    border-bottom: 1px dashed #E5E5E8
+    display: block
+
+    @media (max-width: 600px)
+      &__content-box-item-left
+        width: 100px
+
+  &__content-box-item-right
+    font-size: 11px
+    line-height: 16px
+    color: #5E5C7D
+    border-bottom: 1px solid #E5E5E8
+    width: 28px
+    margin-bottom: 10px
+
+    @media (max-width: 600px)
+      &__content-box-item-right
+        width: 20px
+        font-size: 8px
+
+  &__content-box-item-left--last
+    border-bottom: 1px solid #040036
+
+  &__map
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1)
+    max-width: 512px
+    width: 100%
+    max-height: 508px
+
+  &__content-box-day
+    display: flex
+    justify-content: space-between
+    align-items: center
+    // @extend %Inter
+    font-size: 11px
+    line-height: 16px
+    width: 214px
+    padding-left: 8px
+    margin-top: 4px
+    color: #5E5C7D
+
+  @media (max-width: 600px)
+    &__content-box-day
+      display: none
+
+  &__content-box-month
+    // @extend %Inter
+    font-size: 11px
+    line-height: 16px
+    color: #5E5C7D
+    display: flex
+    padding-left: 8px
+    margin-top: 2px
+
+  @media (max-width: 600px)
+    &__content-box-month
+      display: none
