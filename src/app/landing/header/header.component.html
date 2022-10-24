@@ -35,7 +35,7 @@
           <a class="menu__link" href="#">Industries</a>
           <a class="menu__link" href="#">Data</a>
         </div>
-        <a class="menu__btn" href="#">
+        <a class="menu__btn" (click)="openMap()">
           Buka peta
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -44,7 +44,7 @@
           </svg>
         </a>
       </menu>
-      <a class="menu__btn menu__btn--mobile" href="#">
+      <a class="menu__btn menu__btn--mobile" (click)="openMap()">
         Buka peta
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -69,18 +69,20 @@
   </div>
 </header>
 
-<div class="last-news">
+<div class="last-news" *ngIf="isShowNews">
   <div class="container">
     <div class="last-news__inner">
       <div class="last-news__info">
         <h3 class="last-news__title">
-          Exiciting news: We launch a definition of market value Beta for each land plot
+          <!-- Exiciting news: We launch a definition of market value Beta for each land plot -->
+          Berita menarik: Kami meluncurkan definisi nilai pasar Beta untuk setiap plot tanah
         </h3>
         <p class="last-news__text">
-          Learn how market valuation works and why it will change the way you approach the real estate market
+          <!-- Learn how market valuation works and why it will change the way you approach the real estate market -->
+          Pelajari bagaimana penilaian pasar bekerja dan mengapa itu akan mengubah cara Anda mendekati pasar real estat
         </p>
       </div>
-      <button class="last-news__btn">
+      <button class="last-news__btn" (click)="closeShowNews()">
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 1L12 12M12 1L1 12" stroke="white" />
         </svg>
