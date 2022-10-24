@@ -7,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndustriesComponent implements OnInit {
 
-  constructor() { }
 //класс у кнопки industries__btn--active
 //класс у таба industries__content--active
-  tabs = [
+  public tabs: ITabsIndustries = [
     {
       name: "Agen Real Estat",
       image: "../assets/landing/image/industries/tab-1.png",
@@ -102,6 +101,9 @@ export class IndustriesComponent implements OnInit {
       ],
     }
   ]
+
+
+  constructor() { }
 
   ngOnInit(): void {
   }
