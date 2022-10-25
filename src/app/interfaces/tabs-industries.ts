@@ -9,4 +9,3 @@ export interface ITabsList {
 	title: string,
 	description: string,
 }
-

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITabsIndustries } from 'src/app/interfaces/tabs-industries';
 
 @Component({
   selector: 'app-industries',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndustriesComponent implements OnInit {
 
-//класс у кнопки industries__btn--active
-//класс у таба industries__content--active
-  public tabs: ITabsIndustries = [
+  //класс у кнопки industries__btn--active
+  //класс у таба industries__content--active
+  public tabs: ITabsIndustries[] = [
     {
       name: "Agen Real Estat",
       image: "../assets/landing/image/industries/tab-1.png",
-      list:[
+      list: [
         {
           title: "Tingkatkan penghasilan Anda",
           description: "Periksa penawaran yang masuk dalam hitungan detik dan ubah ketidaknyamanan menjadi keunggulan kompetitif",
@@ -28,10 +29,10 @@ export class IndustriesComponent implements OnInit {
         }
       ],
     },
-      {
+    {
       name: "Penilai",
       image: "../assets/landing/image/industries/tab-2.png",
-      list:[
+      list: [
         {
           title: "Tingkatkan penghasilan Anda",
           description: "Periksa penawaran yang masuk dalam hitungan detik dan ubah ketidaknyamanan menjadi keunggulan kompetitif",
@@ -46,10 +47,10 @@ export class IndustriesComponent implements OnInit {
         }
       ],
     },
-      {
+    {
       name: "Pengembang",
       image: "../assets/landing/image/industries/tab-3.png",
-      list:[
+      list: [
         {
           title: "Tingkatkan penghasilan Anda",
           description: "Periksa penawaran yang masuk dalam hitungan detik dan ubah ketidaknyamanan menjadi keunggulan kompetitif",
@@ -67,7 +68,7 @@ export class IndustriesComponent implements OnInit {
     {
       name: "Pengacara",
       image: "../assets/landing/image/industries/tab-4.png",
-      list:[
+      list: [
         {
           title: "Tingkatkan penghasilan Anda",
           description: "Periksa penawaran yang masuk dalam hitungan detik dan ubah ketidaknyamanan menjadi keunggulan kompetitif",
@@ -85,7 +86,7 @@ export class IndustriesComponent implements OnInit {
     {
       name: "Pembeli/Penjual",
       image: "../assets/landing/image/industries/tab-5.png",
-      list:[
+      list: [
         {
           title: "Tingkatkan penghasilan Anda",
           description: "Periksa penawaran yang masuk dalam hitungan detik dan ubah ketidaknyamanan menjadi keunggulan kompetitif",
@@ -101,7 +102,6 @@ export class IndustriesComponent implements OnInit {
       ],
     }
   ]
-
 
   constructor() { }
 
