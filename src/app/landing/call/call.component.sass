@@ -1,0 +1,42 @@
+@import '/src/sass/landing/vars'
+.call
+  padding: 123px 0 113px
+
+  @media (max-width: 420px)
+    padding: 85px 0 95px
+
+  &__title
+    @extend %Poppins-600
+    font-size: 44px
+    line-height: 60px
+    color: $black
+    text-align: center
+    margin-bottom: 64px
+
+    br
+      display: none
+
+    @media (max-width: 420px)
+      // @extend %WorkSans-600
+      font-size: 40px
+      line-height: 50px
+      margin-bottom: 27px
+      br
+        display: block
+
+  &__btn
+    width: 168px
+    height: 64px
+    background-color: $purple
+    border-radius: 8px
+    display: flex
+    align-items: center
+    justify-content: center
+    @extend %Poppins-500
+    font-size: 18px
+    line-height: 28px
+    color: $light-grey
+    margin: 0 auto
+
+    svg
+      margin-left: 10px
