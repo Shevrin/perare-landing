@@ -26,11 +26,11 @@ import { IndustriesBodyHeaderComponent } from './landing/industries-body-header/
     PartnersComponent,
     IndustriesComponent,
     IndustriesBodyItemComponent,
+    IndustriesBodyHeaderComponent,
     TesterComponent,
     FeaturesComponent,
     ReviewsComponent,
     CallComponent,
-    IndustriesBodyHeaderComponent
   ],
   imports: [
     BrowserModule,
