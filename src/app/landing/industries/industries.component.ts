@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ITabsIndustries } from 'src/app/interfaces/tabs-industries';
-
 @Component({
   selector: 'app-industries',
   templateUrl: './industries.component.html',
@@ -8,8 +7,6 @@ import { ITabsIndustries } from 'src/app/interfaces/tabs-industries';
 })
 export class IndustriesComponent implements OnInit {
 
-  //класс у кнопки industries__btn--active
-  //класс у таба industries__content--active
   public tabs: ITabsIndustries[] = [
     {
       name: "Agen Real Estat",
@@ -28,6 +25,7 @@ export class IndustriesComponent implements OnInit {
           description: "Cari tahu potensi setiap penawaran untuk menjadikannya yang paling menguntungkan bagi Anda dan pelanggan Anda",
         }
       ],
+      selected: true
     },
     {
       name: "Penilai",
@@ -46,6 +44,7 @@ export class IndustriesComponent implements OnInit {
           description: "Cari tahu potensi setiap penawaran untuk menjadikannya yang paling menguntungkan bagi Anda dan pelanggan Anda",
         }
       ],
+      selected: false
     },
     {
       name: "Pengembang",
@@ -64,6 +63,7 @@ export class IndustriesComponent implements OnInit {
           description: "Cari tahu potensi setiap penawaran untuk menjadikannya yang paling menguntungkan bagi Anda dan pelanggan Anda",
         }
       ],
+      selected: false
     },
     {
       name: "Pengacara",
@@ -82,6 +82,7 @@ export class IndustriesComponent implements OnInit {
           description: "Cari tahu potensi setiap penawaran untuk menjadikannya yang paling menguntungkan bagi Anda dan pelanggan Anda",
         }
       ],
+      selected: false
     },
     {
       name: "Pembeli/Penjual",
@@ -100,6 +101,7 @@ export class IndustriesComponent implements OnInit {
           description: "Cari tahu potensi setiap penawaran untuk menjadikannya yang paling menguntungkan bagi Anda dan pelanggan Anda",
         }
       ],
+      selected: false
     }
   ]
 

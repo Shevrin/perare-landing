@@ -1,7 +1,8 @@
 export interface ITabsIndustries {
 	name: string,
 	image: string,
-	list: ITabsList[]
+	list: ITabsList[],
+  selected: boolean
 
 }
 

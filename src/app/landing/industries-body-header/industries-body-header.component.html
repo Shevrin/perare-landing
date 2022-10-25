@@ -1,0 +1,11 @@
+<div class="industries__btns">
+  <button
+    class="industries__btn"
+    [ngClass]="{ 'industries__btn--active': item.tab.selected }"
+    (click)="selectTab(item.tab)"
+    *ngFor="let item of tabsList"
+  >
+    {{ item.tab.name }}
+  </button>
+</div>
+<ng-content></ng-content>

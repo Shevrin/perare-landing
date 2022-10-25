@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ITabsIndustries } from 'src/app/interfaces/tabs-industries';
 
 @Component({
   selector: 'app-industries-body-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./industries-body-item.component.sass']
 })
 export class IndustriesBodyItemComponent implements OnInit {
+
+  @Input() public tab!: ITabsIndustries;
 
   constructor() { }
 

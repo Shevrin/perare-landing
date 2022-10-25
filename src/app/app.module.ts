@@ -14,6 +14,7 @@ import { TesterComponent } from './landing/tester/tester.component';
 import { FeaturesComponent } from './landing/features/features.component';
 import { ReviewsComponent } from './landing/reviews/reviews.component';
 import { CallComponent } from './landing/call/call.component';
+import { IndustriesBodyHeaderComponent } from './landing/industries-body-header/industries-body-header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CallComponent } from './landing/call/call.component';
     TesterComponent,
     FeaturesComponent,
     ReviewsComponent,
-    CallComponent
+    CallComponent,
+    IndustriesBodyHeaderComponent
   ],
   imports: [
     BrowserModule,

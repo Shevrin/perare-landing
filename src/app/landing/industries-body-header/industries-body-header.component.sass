@@ -1,0 +1,48 @@
+@import '/src/sass/landing/vars'
+.industries
+  padding: 70px 0 108px
+  background-image: url('/../assets/landing/image/industries/industries-bg.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: bottom center
+  @media (max-width: 880px)
+    padding: 50px 0
+  @media (max-width: 420px)
+    background-image: none
+
+  &__btns
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 40px
+
+    @media (max-width: 880px)
+      margin-bottom: 20px
+
+    @media (max-width: 700px)
+      overflow-y: auto
+      overflow-x: scroll
+      white-space: nowrap
+      justify-content: flex-start
+
+  &__btn
+    @extend %Poppins-600
+    font-size: 16px
+    line-height: 28px
+    color: $dark-grey
+    border-bottom: 3px solid transparent
+    &:not(:last-child)
+      margin-right: 67px
+
+    @media (max-width: 990px)
+      &:not(:last-child)
+        margin-right: 40px
+
+    @media (max-width: 420px)
+      font-size: 14px
+      &:not(:last-child)
+        margin-right: 24px
+
+  &__btn--active
+    color: $purple
+    border-color: $purple

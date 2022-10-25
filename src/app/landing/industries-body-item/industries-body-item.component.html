@@ -1,1 +1,16 @@
-<!-- <p>industries-body-item works!</p> -->
+<div
+  class="industries__content"
+  [ngClass]="{ 'industries__content--active': tab?.selected }"
+>
+  <ul class="industries__list">
+    <li class="industries__item" *ngFor="let item of tab?.list">
+      <span class="industries__item-name"> {{ item?.title }} </span>
+      <p class="industries__item-text">
+        {{ item?.description }}
+      </p>
+    </li>
+  </ul>
+  <div class="industries__img">
+    <img [src]="tab?.image" alt="employee photo" />
+  </div>
+</div>
