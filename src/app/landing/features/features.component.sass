@@ -1,0 +1,650 @@
+@import '/src/sass/landing/vars'
+.features
+  padding: 64px 0 94px
+
+  @media (max-width: 420px)
+    padding-bottom: 32px
+
+  &__title
+    @extend %Poppins-600
+    font-size: 44px
+    line-height: 60px
+    color: $black
+    text-align: center
+    max-width: 862px
+    margin: 0 auto 56px
+
+    @media (max-width: 930px)
+      margin-bottom: 40px
+
+    @media (max-width: 420px)
+      margin-bottom: 34px
+      font-size: 30px
+      line-height: 52px
+
+  &__body
+    display: flex
+    justify-content: space-between
+    padding: 70px 24px 0
+
+    @media (max-width: 930px)
+      padding-top: 50px
+
+    @media (max-width: 850px)
+      flex-direction: column
+
+    @media (max-width: 420px)
+      padding: 0
+
+  &__body--hide
+    display: none
+
+  &__info
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-right: 25px
+
+    @media (max-width: 850px)
+      width: 100%
+      margin-right: 0
+      margin-bottom: 54px
+
+  &__info--mr12
+    margin-right: 12px
+
+    @media (max-width: 850px)
+      margin-right: 0
+
+  &__info-name
+    font-size: 24px
+    color: $purple
+    text-transform: uppercase
+    display: block
+    margin-bottom: 25px
+
+    @media (max-width: 930px)
+      margin-bottom: 15px
+
+    @media (max-width: 420px)
+      font-size: 16px
+
+  &__info-title
+    @extend %Poppins-600
+    font-size: 33px
+    line-height: 53px
+    margin-bottom: 35px
+    color: $black
+    max-width: 500px
+
+    @media (max-width: 930px)
+      line-height: 44px
+
+    @media (max-width: 850px)
+      max-width: 100%
+      margin-bottom: 24px
+
+  &__info-text,
+  &__info-subtitle
+    font-size: 18px
+    line-height: 30px
+    color: $black
+    display: block
+    margin-bottom: 35px
+    max-width: 480px
+
+    &:last-child
+      max-width: 492px
+      color: $dark-grey
+      margin-bottom: 0
+
+    @media (max-width: 850px)
+      max-width: 100%
+      &:last-child
+        max-width: 100%
+
+  &__info-text
+    @media (max-width: 420px)
+      font-size: 16px
+
+  &__info-subtitle
+    @media (max-width: 420px)
+      font-size: 16px
+      line-height: 42px
+      display: inline
+
+  &__info-text--body-two
+    max-width: 525px !important
+
+    @media (max-width: 850px)
+      max-width: 100% !important
+  &__info-list
+    margin-bottom: 40px
+
+    @media (max-width: 420px)
+      margin-bottom: 34px
+
+  &__info-list-item
+    color: #4E6685
+    position: relative
+    padding-left: 32px
+    @extend %Poppins-600
+    font-size: 18px
+    line-height: 30px
+
+    &:not(:last-child)
+      margin-bottom: 16px
+
+    &::before
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      width: 24px
+      height: 24px
+      background-image: url(/../assets/landing/image/vector/like.svg)
+      background-repeat: no-repeat
+      background-size: cover
+
+    @media (max-width: 420px)
+      font-size: 16px
+
+  &__content
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: space-between
+
+    @media (max-width: 850px)
+      width: 100%
+
+  &__content-list
+    padding: 0 16px
+    border: 1px solid $light-grey
+    border-radius: 8px
+    background-color: $white
+    max-width: 272px
+    width: 100%
+    margin-right: 84px
+    box-shadow: 0px 4px 25px 0px rgb(0 0 0 / 10%)
+
+    @media (max-width: 850px)
+      margin-right: 40px
+
+    @media (max-width: 420px)
+      max-width: 120px
+      padding: 0 8px
+
+  &__content-item
+    padding: 8px 0
+    display: flex
+    flex-direction: column
+    @extend %Inter
+    &:not(:last-child)
+      border-bottom: 2px solid #E5E5E8
+
+    @media (max-width: 420px)
+      padding: 4px 0
+
+  &__content-item--p12
+    padding: 12px 0
+
+    @media (max-width: 420px)
+      padding: 4px 0
+
+  &__content-item-name
+    font-size: 13px
+    line-height: 16px
+    color: #5E5C7D
+    margin-bottom: 4px
+
+    @media (max-width: 420px)
+      font-size: 8px
+      line-height: 8px
+
+  &__content-item-text
+    font-size: 14px
+    line-height: 16px
+    color: #040036
+
+    @media (max-width: 420px)
+      font-size: 8px
+      line-height: 8px
+
+  &__content-wrapper
+    display: flex
+
+    @media (max-width: 850px)
+      align-self: flex-start
+      justify-content: space-between
+      margin: 40px 0
+      width: 100%
+
+    @media (max-width: 420px)
+      margin: 20px 0
+
+    .features__content-list
+      margin-right: 0
+
+  &__content-box
+    position: relative
+    max-width: 168px
+    width: 100%
+    height: 156px
+    border: 4px solid $purple
+    margin-right: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @media (max-width: 420px)
+      max-width: 85px
+      height: 73px
+      border-width: 2px
+
+  &__content-box-circle
+    position: absolute
+    width: 14px
+    height: 14px
+    background: #E8EDF6
+    border: 3px solid $purple
+    border-radius: 50%
+
+    &:nth-child(1)
+      left: -8px
+      top: -8px
+
+      &::before
+        position: absolute
+        content: ''
+        top: -90px
+        left: 3px
+        height: 88px
+        width: 1px
+        background-color: $purple
+
+      &::after
+        position: absolute
+        content: ''
+        top: 3px
+        left: -23px
+        height: 1px
+        width: 20px
+        background-color: $purple
+
+    &:nth-child(2)
+      right: -8px
+      top: -8px
+
+      &::before
+        position: absolute
+        content: ''
+        top: -8px
+        left: 4px
+        height: 5px
+        width: 1px
+        background-color: $purple
+
+      &::after
+        position: absolute
+        content: ''
+        top: 3px
+        left: 11px
+        height: 1px
+        width: 4px
+        background-color: $purple
+
+    &:nth-child(3)
+      left: -8px
+      bottom: -8px
+
+      &::before
+        position: absolute
+        content: ''
+        bottom: -26px
+        right: 4px
+        height: 23px
+        width: 1px
+        background-color: $purple
+
+      &::after
+        position: absolute
+        content: ''
+        top: 3px
+        right: 11px
+        height: 1px
+        width: 36px
+        background-color: $purple
+
+    &:nth-child(4)
+      right: -8px
+      bottom: -8px
+
+      &::before
+        position: absolute
+        content: ''
+        bottom: -34px
+        right: 4px
+        height: 31px
+        width: 1px
+        background-color: $purple
+
+      &::after
+        position: absolute
+        content: ''
+        top: 3px
+        right: -23px
+        height: 1px
+        width: 20px
+        background-color: $purple
+
+    @media (max-width: 420px)
+      width: 8px
+      height: 8px
+      border-width: 2px
+
+      &:nth-child(1)
+        left: -5px
+        top: -5px
+
+        &::before
+          height: 40px
+          top: -42px
+          left: 2px
+
+        &::after
+          width: 10px
+          left: -12px
+          top: 1px
+
+      &:nth-child(2)
+        right: -5px
+        top: -5px
+
+        &::before
+          top: -7px
+          left: 2px
+
+        &::after
+          top: 1px
+          left: 6px
+
+      &:nth-child(3)
+        left: -5px
+        bottom: -5px
+
+        &::before
+          height: 10px
+          bottom: -11px
+          right: 1px
+
+        &::after
+          width: 18px
+          top: 1px
+          right: 6px
+
+      &:nth-child(4)
+        right: -5px
+        bottom: -5px
+
+        &::before
+          height: 14px
+          right: 2px
+          bottom: -16px
+
+        &::after
+          width: 10px
+          top: 1px
+          right: -12px
+
+  &__content-box-subtext
+    position: absolute
+    @extend %Inter
+    font-weight: 600
+    font-size: 14px
+    line-height: 16px
+    color: $black
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 4px 8px
+    background-color: $light-grey
+    border: 1px solid $grey
+    border-radius: 50px
+
+    @media (max-width: 420px)
+      padding: 3px 4px
+      font-size: 6px
+      line-height: 4px
+
+  &__content-box-subtext--one
+    top: -15px
+    left: 50%
+    transform: translateX(-50%)
+    @media (max-width: 420px)
+      top: -7px
+
+  &__content-box-subtext--two
+    top: 50%
+    left: -25px
+    transform: translateY(-50%)
+    @media (max-width: 420px)
+      left: -12px
+
+  &__content-box-subtext--three
+    bottom: -15px
+    left: 50%
+    transform: translateX(-50%)
+
+    @media (max-width: 420px)
+      bottom: -7px
+
+  &__content-box-subtext--four
+    top: 50%
+    right: -25px
+    transform: translateY(-50%)
+
+    @media (max-width: 420px)
+      right: -12px
+
+  &__content-box-text
+    @extend %Inter
+    font-weight: 700
+    font-size: 16px
+    line-height: 16px
+    color: $black
+
+    @media (max-width: 420px)
+      font-size: 12px
+      line-height: 14px
+
+  &__info-box
+    display: flex
+    align-items: center
+    width: 100%
+    margin: 33px 0 42px 0
+
+    @media (max-width: 850px)
+      justify-content: space-around
+
+    @media (max-width: 490px)
+      flex-direction: column
+      align-items: start
+
+  &__info-box-item
+    display: flex
+    align-items: center
+    flex-direction: column
+
+    &:first-child
+      margin: 0 90px 0 24px
+
+      @media (max-width: 850px)
+        margin: 0
+
+    @media (max-width: 490px)
+      align-items: start
+
+  &__info-box-count
+    @extend %Poppins-600
+    font-size: 33px
+    line-height: 53px
+    color: $black
+
+    @media (max-width: 490px)
+      color: $purple
+
+  &__info-box-text
+    font-size: 18px
+    line-height: 30px
+    color: $dark-grey
+
+  &__graph
+    @extend %Inter
+    padding-left: 16px
+    width: 50%
+    display: flex
+    flex-direction: column
+
+    @media (max-width: 850px)
+      width: 100%
+      padding-left: 0
+
+  &__graph-btns
+    margin-bottom: 4px
+
+  &__graph-btn
+    @extend %Inter
+    font-size: 11px
+    line-height: 16px
+    padding: 0 4px
+    color: #5E5C7D
+    &:first-child
+      margin-right: 8px
+
+  &__graph-btn--active
+    background-color: $purple
+    color: #fefeff
+    border-radius: 4px
+
+  &__graph-title
+    padding: 12px 0
+    font-weight: 600
+    font-size: 14px
+    line-height: 16px
+    color: #040036
+
+  &__graph-info
+    padding: 8px 0
+    display: flex
+    flex-direction: column
+
+    span
+      font-size: 14px
+      line-height: 16px
+      &:first-child
+        margin-bottom: 4px
+        color: #040036
+
+      &:last-child
+        font-size: 13px
+        color: #5E5C7D
+
+  &__graph-content
+    padding: 0 16px
+
+  &__graph-list
+    padding-top: 12px
+    border-top: 2px solid #E5E5E8
+    margin-bottom: 4px
+
+  &__graph-list-item
+    display: flex
+    justify-content: space-between
+    margin-bottom: 62px
+    // position: relative
+    &:last-child
+      margin-bottom: 0
+      .features__graph-list-item-left
+        border-bottom: 1px solid #040036
+
+    @media (max-width: 490px)
+      margin-bottom: 36px
+
+    @media (max-width: 380px)
+      margin-bottom: 14px
+
+  &__graph-list-item-left
+    width: 100%
+    border-bottom: 1px dashed #E5E5E8
+    margin-right: 4px
+    position: relative
+
+  &__graph-list-item-circle
+    position: absolute
+    width: 16px
+    height: 16px
+    background-color: $light-grey
+    border: 4px solid $purple
+    border-radius: 50%
+    right: 68px
+    top: 8px
+    z-index: 5
+
+    @media (max-width: 380px)
+      right: 20px
+
+  &__graph-list-item-right
+    font-size: 11px
+    line-height: 16px
+    color: #5E5C7D
+    border-bottom: 1px solid #E5E5E8
+
+  &__graph-vector-purple,
+  &__graph-vector-blur,
+  &__graph-vector-dashed
+    position: absolute
+    z-index: 2
+    max-width: 480px
+    width: 100%
+
+  &__graph-vector-purple
+    @media (max-width: 380px)
+      height: 90px
+
+  &__graph-vector-blur
+    top: 12px
+
+    @media (max-width: 380px)
+      height: 120px
+      top: 0
+
+  &__graph-vector-dashed
+    top: 40px
+
+    @media (max-width: 380px)
+      top: -6px
+
+  &__graph-date
+    max-width: 480px
+    font-size: 11px
+    line-height: 16px
+
+    @media (max-width: 630px)
+      margin-right: 32px
+
+  &__graph-day
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #5E5C7D
+
+  &__graph-month
+    color: #040036
+    margin-bottom: 12px
+    display: block
+
+  &__graph-lastday
+    color: #5E5C7D
