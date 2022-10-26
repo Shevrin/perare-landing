@@ -1,13 +1,10 @@
-<section class="industries">
+<section class="industries" id="industries">
   <div class="container">
     <h2 class="industries__title">
       Fitur khusus untuk semua orang yang bekerja dengan real estat
     </h2>
-      <app-industries-body-header>
-        <app-industries-body-item
-          *ngFor="let tab of tabs" [tab]="tab"
-        ></app-industries-body-item>
-      </app-industries-body-header>
+    <app-industries-body-header>
+      <app-industries-body-item *ngFor="let tab of tabs" [tab]="tab"></app-industries-body-item>
+    </app-industries-body-header>
   </div>
 </section>
-
