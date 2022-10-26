@@ -13,43 +13,58 @@ export class FeaturesComponent implements OnInit {
   }
 
 }
-//счётчик 
+//счётчик для 12.000.000+
 // const counterOne = () => {
-//   let counts;
-//   let upto = 72000000;
-//   let offSetTop = document.querySelector(".features__info-box-count");
-//   let clientHeight = document.body.offsetHeight;
+  // const time = 3000;
+  // const step = 10000;
 
-//   function updated() {
-//     let count = document.querySelector(".features__info-box-count");
-//     count.textContent = ++upto + "+";
-//     if (upto === 82000000) {
-//       clearInterval(counts);
-//       count.textContent = "82,000,000+";
-//     }
-//   }
+  // let featuresCounter = document.getElementById(".count-1");
+  // let clientHeight = document.body.offsetHeight;
 
-//   if (offSetTop.offsetTop - clientHeight <= window.scrollY) {
-//     counts = setInterval(updated, 1);
-//   }
+  // function upNum(num, count) {
+  //   let n = 11000000;
+  //   let t = Math.round(time / (num / step));
+  //   let interval = setInterval(() => {
+  //     n = n + step;
+  //     if (n == num) {
+  //       clearInterval(interval);
+  //     }
+  //     count.innerHTML = n + "+";
+  //   }, t);
+  // }
+
+  // window.addEventListener("scroll", () => {
+  //   if (featuresCounter.offsetTop - clientHeight <= window.scrollY) {
+  //     upNum(3000, featuresCounter);
+  //     window.scrollY = null;
+  //   }
+  // });
 // };
 
-// const counterTwo = () => {
-//   let counts;
-//   let upto = 1;
-//   let offSetTop = document.querySelector(".features__info-box-count");
-//   let clientHeight = document.body.offsetHeight;
+//счётчик для 100М+
+// const counterOne = () => {
+  // const time = 3000;
+  // const step = 1;
 
-//   function updated() {
-//     let count = document.querySelector(".features__info-box-count");
-//     count.textContent = ++upto + "M+";
-//     if (upto === 100) {
-//       clearInterval(counts);
-//       count.textContent = "100M+";
-//     }
-//   }
+  // let featuresCounter = document.getElementById(".count-2");
+  // let clientHeight = document.body.offsetHeight;
 
-//   if (offSetTop.offsetTop - clientHeight <= window.scrollY) {
-//     counts = setInterval(updated, 1);
-//   }
+  // function upNum(num, count) {
+  //   let n = 1;
+  //   let t = Math.round(time / (num / step));
+  //   let interval = setInterval(() => {
+  //     n = n + step;
+  //     if (n == num) {
+  //       clearInterval(interval);
+  //     }
+  //     count.innerHTML = n;
+  //   }, t);
+  // }
+
+  // window.addEventListener("scroll", () => {
+  //   if (featuresCounter.offsetTop - clientHeight <= window.scrollY) {
+  //     upNum(100, featuresCounter);
+  //     window.scrollY = null;
+  //   }
+  // });
 // };
