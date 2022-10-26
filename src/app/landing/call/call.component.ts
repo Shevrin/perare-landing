@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-call',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CallComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  public openMap(): void {
+    console.log('redirect to map')
+    // this.router.navigate(['map'])
+  }
 }
