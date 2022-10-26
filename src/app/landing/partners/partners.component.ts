@@ -16,21 +16,29 @@ export class PartnersComponent implements OnInit {
 
 //анимация счетчика
 // const counter = () => {
-//   let counts;
-//   let upto = 1000;
-//   let offSetTop = document.querySelector(".partners__counter");
+// const time = 3000;
+//   const step = 10;
+
+//   let partnersCounter = document.querySelector(".partners__counter");
 //   let clientHeight = document.body.offsetHeight;
 
-//   function updated() {
-//     let count = document.querySelector(".partners__counter");
-//     count.textContent = ++upto + "+";
-//     if (upto === 3000) {
-//       clearInterval(counts);
-//       count.textContent = "3,000+";
-//     }
+//   function upNum(num, count) {
+//     let n = 1000;
+//     let t = Math.round(time / (num / step));
+//     let interval = setInterval(() => {
+//       n = n + step;
+//       if (n == num) {
+//         clearInterval(interval);
+//       }
+//       count.innerHTML = n + "+";
+//     }, t);
 //   }
 
-//   if (offSetTop.offsetTop - clientHeight <= window.scrollY) {
-//     counts = setInterval(updated, 1);
-//   }
+//   window.addEventListener("scroll", () => {
+//     if (partnersCounter.offsetTop - clientHeight <= window.scrollY) {
+//       upNum(3000, partnersCounter);
+//       window.scrollY = null;
+//     }
+//   });
 // };
+//
