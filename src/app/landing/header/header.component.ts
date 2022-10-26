@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   public isShowNews: boolean = true;
+  public isOpenBurgerMenu: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -23,14 +24,9 @@ export class HeaderComponent implements OnInit {
     this.isShowNews = false;
   }
 
+  public toggleBurgerMenu(): void {
+    this.isOpenBurgerMenu = !this.isOpenBurgerMenu
+  }
 
 }
-//бургер
-// const burger = () => {
-//   const btn = document.querySelector(".header__burger");
-//   const headerInner = document.querySelector(".header__inner");
 
-//   btn.addEventListener("click", () => {
-//     headerInner.classList.toggle("header__inner--open");
-//   });
-// };

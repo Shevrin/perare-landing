@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container">
-    <div class="header__inner">
+    <div class="header__inner" [ngClass]="{'header__inner--open': isOpenBurgerMenu}">
       <a class="logo" href="#">
         <svg class="logo__img" width="30" height="34" viewBox="0 0 30 34" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@
             fill="white" />
         </svg>
       </a>
-      <button class="header__burger">
+      <button class="header__burger" (click)="toggleBurgerMenu()">
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
