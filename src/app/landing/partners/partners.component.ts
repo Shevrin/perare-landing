@@ -13,3 +13,24 @@ export class PartnersComponent implements OnInit {
   }
 
 }
+
+//анимация счетчика
+// const counter = () => {
+//   let counts;
+//   let upto = 1000;
+//   let offSetTop = document.querySelector(".partners__counter");
+//   let clientHeight = document.body.offsetHeight;
+
+//   function updated() {
+//     let count = document.querySelector(".partners__counter");
+//     count.textContent = ++upto + "+";
+//     if (upto === 3000) {
+//       clearInterval(counts);
+//       count.textContent = "3,000+";
+//     }
+//   }
+
+//   if (offSetTop.offsetTop - clientHeight <= window.scrollY) {
+//     counts = setInterval(updated, 1);
+//   }
+// };

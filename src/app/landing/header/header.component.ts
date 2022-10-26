@@ -25,3 +25,12 @@ export class HeaderComponent implements OnInit {
 
 
 }
+//бургер
+// const burger = () => {
+//   const btn = document.querySelector(".header__burger");
+//   const headerInner = document.querySelector(".header__inner");
+
+//   btn.addEventListener("click", () => {
+//     headerInner.classList.toggle("header__inner--open");
+//   });
+// };

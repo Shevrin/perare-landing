@@ -8,6 +8,19 @@
     justify-content: space-between
     align-items: center
 
+  &__inner--open
+    .menu
+      top: 8px
+
+    .logo__text
+      display: block
+
+    .header__burger-close
+      display: block
+
+    .header__burger-line
+      display: none
+
   &__burger
     width: 16px
     height: 16px
@@ -37,9 +50,6 @@
   &__burger-close
     display: none
 
-  &__burger-close--visible
-    display: block
-
 .logo
   width: 150px
   height: 34px
@@ -52,9 +62,6 @@
     margin-left: 8px
     @media (max-width: 600px)
       display: none
-
-  &__text--visible
-    display: block
 
 .menu
   display: flex
@@ -122,9 +129,11 @@
       display: flex
 
   &__box
-    // display: none
     display: flex
     align-items: center
+
+    @media (max-width: 600px)
+      flex-direction: column
 
   @media (max-width: 600px)
     position: absolute
@@ -139,10 +148,6 @@
     flex-direction: column
     align-items: center
     justify-content: flex-end
-
-  &--mobile
-    @media (max-width: 600px)
-      top: 8px
 
 .last-news
   margin-top: 11px
