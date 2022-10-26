@@ -12,4 +12,17 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public handlerClickRules(item: string): void {
+    switch (item) {
+      case 'privacy':
+        console.log('privacy');
+        break;
+      case 'terms':
+        console.log('terms');
+        break;
+      case 'cookie':
+        console.log('cookie');
+        break;
+    }
+  }
 }
