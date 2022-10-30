@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITabsIndustries } from 'src/app/interfaces/tabs-industries';
+import { ITabsIndustries } from '../../interfaces/tabs-industries';
 @Component({
   selector: 'app-industries',
   templateUrl: './industries.component.html',

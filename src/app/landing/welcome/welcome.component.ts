@@ -14,8 +14,8 @@ export class WelcomeComponent implements OnInit {
   }
 
   public openMap(): void {
-    console.log('redirect to map')
-    // this.router.navigate(['map'])
+    console.log('redirect to map');
+    // this.router.navigate(['map']);
   }
 
 }

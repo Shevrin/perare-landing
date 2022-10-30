@@ -1,5 +1,5 @@
 import { AfterContentInit, Component, ContentChildren, OnInit, QueryList } from '@angular/core';
-import { ITabsIndustries } from 'src/app/interfaces/tabs-industries';
+import { ITabsIndustries } from '../../interfaces/tabs-industries';
 import { IndustriesBodyItemComponent } from '../industries-body-item/industries-body-item.component';
 
 @Component({

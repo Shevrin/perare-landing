@@ -1,6 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, HostListener, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
-import { BehaviorSubject, fromEvent, Observable, Subject, takeUntil, interval, map, startWith, takeWhile, switchMap, mergeMap, switchMapTo, endWith, finalize } from 'rxjs';
+import { interval, map, endWith, takeWhile, finalize } from 'rxjs';
 
 @Component({
   selector: 'app-counter',
@@ -34,7 +34,6 @@ export class CounterComponent implements OnInit, OnDestroy {
     if (window.pageYOffset - this.elOffsetTop <= window.innerHeight / 1) {
       this.startCounter = true;
     }
-      console.log(`host: `, `window.pageYOffset`, window.pageYOffset, `elOffsetTop`, this.elOffsetTop, 'difference',window.pageYOffset - this.elOffsetTop, this.startCounter);
   }
 
   constructor(private element: ElementRef, private renderer: Renderer2, private scroller: ViewportScroller) {
