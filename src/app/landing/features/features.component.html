@@ -1,6 +1,7 @@
 <section class="features" id="features">
   <div class="container">
     <h2 class="features__title">
+
       Kami membuat data untuk Anda
       lebih mudah diakses dari sebelumnya
     </h2>
@@ -84,12 +85,12 @@
         </h4>
         <div class="features__info-box">
           <div class="features__info-box-item">
-            <span class="features__info-box-count" id="count-1">82,000,000+</span>
+            <div class="features__info-box-count" id="count-1"><app-counter [startValue]="12000000" [endValue]="82000000" [step]="10000" [suffix]="'+'"></app-counter></div>
             <span class="features__info-box-text">Lahan tanah</span>
           </div>
           <div class="features__info-box-item">
             <div class="features__info-box-count">
-              <span id="count-2">100</span><span>M+</span>
+              <div id="count-2"><app-counter [startValue]="1" [endValue]="100" [step]="1" [suffix]="'M+'"></app-counter></div>
             </div>
             <span class="features__info-box-text">Daftar historis</span>
           </div>
@@ -177,3 +178,4 @@
     </div>
   </div>
 </section>
+

@@ -15,6 +15,7 @@ import { FeaturesComponent } from './landing/features/features.component';
 import { ReviewsComponent } from './landing/reviews/reviews.component';
 import { CallComponent } from './landing/call/call.component';
 import { IndustriesBodyHeaderComponent } from './landing/industries-body-header/industries-body-header.component';
+import { CounterComponent } from './landing/counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { IndustriesBodyHeaderComponent } from './landing/industries-body-header/
     FeaturesComponent,
     ReviewsComponent,
     CallComponent,
+    CounterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.sass']
 })
-export class FeaturesComponent implements OnInit {
+export class FeaturesComponent implements OnInit, AfterViewInit {
+
 
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+  ngAfterViewInit(): void {
   }
 
 }
