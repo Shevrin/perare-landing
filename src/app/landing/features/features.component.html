@@ -268,25 +268,17 @@
         </h4>
         <div class="features__info-box">
           <div class="features__info-box-item">
-            <div class="features__info-box-count" id="count-1">
-              <app-counter
-                [startValue]="12000000"
-                [endValue]="82000000"
-                [step]="10000"
-                [suffix]="'+'"
-              ></app-counter>
+
+            <div class="features__info-box-count features__info-box-first" id="count-1">
+              <app-counter [startValue]="12000000" [endValue]="82000000" [step]="10000" [suffix]="'+'"></app-counter>
             </div>
             <span class="features__info-box-text">Lahan tanah</span>
           </div>
           <div class="features__info-box-item">
-            <div class="features__info-box-count">
+            <div class="features__info-box-count features__info-box-last">
               <div id="count-2">
-                <app-counter
-                  [startValue]="1"
-                  [endValue]="100"
-                  [step]="1"
-                  [suffix]="'M+'"
-                ></app-counter>
+                <app-counter [startValue]="1" [endValue]="100" [step]="1" [suffix]="'M+'"></app-counter>
+
               </div>
             </div>
             <span class="features__info-box-text">Daftar historis</span>
