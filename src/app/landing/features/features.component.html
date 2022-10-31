@@ -1,12 +1,10 @@
 <section class="features" id="features">
   <div class="container">
     <h2 class="features__title">
-
-      Kami membuat data untuk Anda
-      lebih mudah diakses dari sebelumnya
+      Kami membuat data untuk Anda lebih mudah diakses dari sebelumnya
     </h2>
     <div class="features__body">
-      <div class="features__info ">
+      <div #scrollElement class="features__info">
         <span class="features__info-name">DATA MENTAH</span>
         <h4 class="features__info-title">
           Pengumpulan data tanah paling andal di Indonesia
@@ -23,68 +21,254 @@
           </li>
         </ul>
         <p class="features__info-text">
-          Investor real estat, lembaga keuangan, dan organisasi lain menggunakan data properti terperinci untuk lebih
-          memahami gambaran besar properti
+          Investor real estat, lembaga keuangan, dan organisasi lain menggunakan
+          data properti terperinci untuk lebih memahami gambaran besar properti
         </p>
-      </div>
-      <div class="features__content">
-        <ul class="features__content-list">
-          <li class="features__content-item">
-            <span class="features__content-item-name">NIB</span>
-            <span class="features__content-item-text">01.23.45.67.89012</span>
-          </li>
-          <li class="features__content-item">
-            <span class="features__content-item-name">Luas</span>
-            <span class="features__content-item-text">12.345m² ~ 123ARE </span>
-          </li>
-        </ul>
-        <div class="features__content-wrapper">
-          <div class="features__content-box">
-            <span class="features__content-box-circle"></span>
-            <span class="features__content-box-circle"></span>
-            <span class="features__content-box-circle"></span>
-            <span class="features__content-box-circle"></span>
-            <span class="features__content-box-text">360m²</span>
-            <span class="features__content-box-subtext features__content-box-subtext--one">18m</span>
-            <span class="features__content-box-subtext features__content-box-subtext--two">20m</span>
-            <span class="features__content-box-subtext features__content-box-subtext--three">18m</span>
-            <span class="features__content-box-subtext features__content-box-subtext--four">20m</span>
-          </div>
 
-          <ul class="features__content-list">
-            <li class="features__content-item">
-              <span class="features__content-item-name">Hak</span>
-              <span class="features__content-item-text">Hak Milik</span>
-            </li>
-            <li class="features__content-item">
-              <span class="features__content-item-name">Pengelolaan</span>
-              <span class="features__content-item-text">Kosong </span>
-            </li>
-            <li class="features__content-item">
-              <span class="features__content-item-name">Alamat</span>
-              <span class="features__content-item-text">Nusa Tenggara Barat, Lombok Tengah, Praya Barat, Selong Belanak
-              </span>
-            </li>
-          </ul>
-        </div>
-        <ul class="features__content-list">
-          <li class="features__content-item features__content-item--p12">
-            <span class="features__content-item-text">Lat/Lon</span>
-          </li>
-          <li class="features__content-item features__content-item--p12">
-            <span class="features__content-item-text">Dimensi batas</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="features__body ">
-      <div class="features__info features__info--mr12">
         <span class="features__info-name">DATA ANALISIS</span>
         <h4 class="features__info-title">
           Data penilai dan daftar riwayat yang diproses oleh model penilaian
         </h4>
         <div class="features__info-box">
           <div class="features__info-box-item">
+            <div class="features__info-box-count" id="count-1">
+              <app-counter
+                [startValue]="12000000"
+                [endValue]="82000000"
+                [step]="10000"
+                [suffix]="'+'"
+              ></app-counter>
+            </div>
+            <span class="features__info-box-text">Lahan tanah</span>
+          </div>
+          <div class="features__info-box-item">
+            <div class="features__info-box-count">
+              <div id="count-2">
+                <app-counter
+                  [startValue]="1"
+                  [endValue]="100"
+                  [step]="1"
+                  [suffix]="'M+'"
+                ></app-counter>
+              </div>
+            </div>
+            <span class="features__info-box-text">Daftar historis</span>
+          </div>
+        </div>
+        <p class="features__info-text features__info-text--body-two">
+          Perare menawarkan pilihan kumpulan data analitik yang paling dicari
+          dan memastikan kontinuitas pengiriman data tertinggi di semua platform
+          mitra kami.
+        </p>
+      </div>
+
+      <ng-container *ngIf="getPosition() | async as position">
+        <div class="features__box-contetnt">
+          <div class="features__box-item">
+            <div
+              class="features__content"
+              [@openClose]="position < 340 ? 'open' : 'closed'"
+            >
+              <ul class="features__content-list">
+                <li class="features__content-item">
+                  <span class="features__content-item-name">NIB</span>
+                  <span class="features__content-item-text"
+                    >01.23.45.67.89012</span
+                  >
+                </li>
+                <li class="features__content-item">
+                  <span class="features__content-item-name">Luas</span>
+                  <span class="features__content-item-text"
+                    >12.345m² ~ 123ARE
+                  </span>
+                </li>
+              </ul>
+              <div class="features__content-wrapper">
+                <div class="features__content-box">
+                  <span class="features__content-box-circle"></span>
+                  <span class="features__content-box-circle"></span>
+                  <span class="features__content-box-circle"></span>
+                  <span class="features__content-box-circle"></span>
+                  <span class="features__content-box-text">360m²</span>
+                  <span
+                    class="features__content-box-subtext features__content-box-subtext--one"
+                    >18m</span
+                  >
+                  <span
+                    class="features__content-box-subtext features__content-box-subtext--two"
+                    >20m</span
+                  >
+                  <span
+                    class="features__content-box-subtext features__content-box-subtext--three"
+                    >18m</span
+                  >
+                  <span
+                    class="features__content-box-subtext features__content-box-subtext--four"
+                    >20m</span
+                  >
+                </div>
+
+                <ul class="features__content-list">
+                  <li class="features__content-item">
+                    <span class="features__content-item-name">Hak</span>
+                    <span class="features__content-item-text">Hak Milik</span>
+                  </li>
+                  <li class="features__content-item">
+                    <span class="features__content-item-name">Pengelolaan</span>
+                    <span class="features__content-item-text">Kosong </span>
+                  </li>
+                  <li class="features__content-item">
+                    <span class="features__content-item-name">Alamat</span>
+                    <span class="features__content-item-text"
+                      >Nusa Tenggara Barat, Lombok Tengah, Praya Barat, Selong
+                      Belanak
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <ul class="features__content-list">
+                <li class="features__content-item features__content-item--p12">
+                  <span class="features__content-item-text">Lat/Lon</span>
+                </li>
+                <li class="features__content-item features__content-item--p12">
+                  <span class="features__content-item-text">Dimensi batas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="features__box-item">
+            <div
+              class="features__graph"
+              [@openClose]="position >= 360 ? 'closed' : 'open'"
+            >
+              <div class="features__graph-btns">
+                <button class="features__graph-btn">PASAR</button>
+                <button class="features__graph-btn features__graph-btn--active">
+                  BARU
+                </button>
+              </div>
+              <h5 class="features__graph-title">Harga pasar tanah</h5>
+              <div class="features__graph-info">
+                <span>Rp126.884.557/m²</span>
+                <span>↓0.97% dari minggu lalu </span>
+              </div>
+              <div class="features__graph-content">
+                <ul class="features__graph-list">
+                  <li class="features__graph-list-item">
+                    <span class="features__graph-list-item-left">
+                      <svg
+                        class="features__graph-vector-purple"
+                        width="480"
+                        height="216"
+                        viewBox="0 0 505 182"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 43.6183L30.3187 62.1143C55.0751 78.2836 87.8737 74.3043 108.045 52.6841L128.974 30.2527C151.886 5.69521 186.946 -3.372 218.891 6.99851V6.99851C235.012 12.2318 252.315 12.6119 268.65 8.0914L274.894 6.36339C311.563 -3.7843 350.866 6.10698 378.364 32.403L410.008 62.6648C416.656 69.0226 422.821 75.8671 428.452 83.1415L503 179.451"
+                          stroke="#636AE6"
+                          stroke-width="4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <svg
+                        class="features__graph-vector-blur"
+                        width="480"
+                        height="240"
+                        viewBox="0 0 501 230"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M28.3187 60.1143L0 41.6183V230H501V177.451L426.452 81.1415C420.821 73.8671 414.656 67.0226 408.008 60.6648L376.364 30.4031C348.866 4.107 309.563 -5.7843 272.894 4.36339L266.65 6.0914C250.315 10.6119 233.012 10.2318 216.891 4.99851C184.946 -5.372 149.886 3.69521 126.974 28.2527L106.045 50.6841C85.8737 72.3043 53.0751 76.2835 28.3187 60.1143Z"
+                          fill="url(#paint0_radial_415_5329)"
+                          fill-opacity="0.2"
+                        />
+                        <defs>
+                          <radialGradient
+                            id="paint0_radial_415_5329"
+                            cx="0"
+                            cy="0"
+                            r="1"
+                            gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(251 11) rotate(90) scale(196 251)"
+                          >
+                            <stop stop-color="#636AE6" />
+                            <stop
+                              offset="1"
+                              stop-color="#636AE6"
+                              stop-opacity="0"
+                            />
+                          </radialGradient>
+                        </defs>
+                      </svg>
+                      <svg
+                        class="features__graph-vector-dashed"
+                        width="480px"
+                        height="80"
+                        viewBox="0 0 502 80"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 14.7027L50.0597 2.85651C65.1041 -0.77619 80.9509 3.76109 91.7929 14.8056L120.99 44.548C146.139 70.1666 187.98 68.2077 210.626 40.3517V40.3517C230.498 15.9063 265.862 10.9261 291.713 28.9322L322.114 50.1081V50.1081C376.714 93.3988 456.07 85.6644 501 32.4054V32.4054"
+                          stroke="#A8B4C5"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-dasharray="4 4"
+                        />
+                      </svg>
+                    </span>
+                    <span class="features__graph-list-item-right">126.8</span>
+                  </li>
+                  <li class="features__graph-list-item">
+                    <span class="features__graph-list-item-left">
+                      <span class="features__graph-list-item-circle"></span>
+                    </span>
+                    <span class="features__graph-list-item-right">126.4</span>
+                  </li>
+                  <li class="features__graph-list-item">
+                    <span class="features__graph-list-item-left"></span>
+                    <span class="features__graph-list-item-right">126.1</span>
+                  </li>
+                  <li class="features__graph-list-item">
+                    <span class="features__graph-list-item-left"></span>
+                    <span class="features__graph-list-item-right">125.8</span>
+                  </li>
+                </ul>
+                <div class="features__graph-date">
+                  <div class="features__graph-day">
+                    <span>24</span>
+                    <span>25</span>
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+                    <span>29</span>
+                    <span>30</span>
+                  </div>
+                  <span class="features__graph-month">Sep</span>
+                  <span class="features__graph-lastday"
+                    >Last data sync: Feb 4, 2022 (Kemarin)
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="features__body">
+      <!-- <div class="features__info features__info--mr12">
+        <span class="features__info-name">DATA ANALISIS</span>
+        <h4 class="features__info-title">
+          Data penilai dan daftar riwayat yang diproses oleh model penilaian
+        </h4>
+        <div class="features__info-box">
+          <div class="features__info-box-item">
+
             <div class="features__info-box-count features__info-box-first" id="count-1">
               <app-counter [startValue]="12000000" [endValue]="82000000" [step]="10000" [suffix]="'+'"></app-counter>
             </div>
@@ -94,24 +278,26 @@
             <div class="features__info-box-count features__info-box-last">
               <div id="count-2">
                 <app-counter [startValue]="1" [endValue]="100" [step]="1" [suffix]="'M+'"></app-counter>
+
               </div>
             </div>
             <span class="features__info-box-text">Daftar historis</span>
           </div>
         </div>
         <p class="features__info-text features__info-text--body-two">
-          Perare menawarkan pilihan kumpulan data analitik yang paling dicari dan memastikan kontinuitas pengiriman data
-          tertinggi di semua platform mitra kami.
+          Perare menawarkan pilihan kumpulan data analitik yang paling dicari
+          dan memastikan kontinuitas pengiriman data tertinggi di semua platform
+          mitra kami.
         </p>
-      </div>
-      <div class="features__graph">
+      </div> -->
+      <!-- <div class="features__graph">
         <div class="features__graph-btns">
           <button class="features__graph-btn">PASAR</button>
-          <button class="features__graph-btn features__graph-btn--active">BARU</button>
+          <button class="features__graph-btn features__graph-btn--active">
+            BARU
+          </button>
         </div>
-        <h5 class="features__graph-title">
-          Harga pasar tanah
-        </h5>
+        <h5 class="features__graph-title">Harga pasar tanah</h5>
         <div class="features__graph-info">
           <span>Rp126.884.557/m²</span>
           <span>↓0.97% dari minggu lalu </span>
@@ -120,31 +306,65 @@
           <ul class="features__graph-list">
             <li class="features__graph-list-item">
               <span class="features__graph-list-item-left">
-                <svg class="features__graph-vector-purple" width="480" height="216" viewBox="0 0 505 182" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="features__graph-vector-purple"
+                  width="480"
+                  height="216"
+                  viewBox="0 0 505 182"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M2 43.6183L30.3187 62.1143C55.0751 78.2836 87.8737 74.3043 108.045 52.6841L128.974 30.2527C151.886 5.69521 186.946 -3.372 218.891 6.99851V6.99851C235.012 12.2318 252.315 12.6119 268.65 8.0914L274.894 6.36339C311.563 -3.7843 350.866 6.10698 378.364 32.403L410.008 62.6648C416.656 69.0226 422.821 75.8671 428.452 83.1415L503 179.451"
-                    stroke="#636AE6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                    stroke="#636AE6"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
-                <svg class="features__graph-vector-blur" width="480" height="240" viewBox="0 0 501 230" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="features__graph-vector-blur"
+                  width="480"
+                  height="240"
+                  viewBox="0 0 501 230"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M28.3187 60.1143L0 41.6183V230H501V177.451L426.452 81.1415C420.821 73.8671 414.656 67.0226 408.008 60.6648L376.364 30.4031C348.866 4.107 309.563 -5.7843 272.894 4.36339L266.65 6.0914C250.315 10.6119 233.012 10.2318 216.891 4.99851C184.946 -5.372 149.886 3.69521 126.974 28.2527L106.045 50.6841C85.8737 72.3043 53.0751 76.2835 28.3187 60.1143Z"
-                    fill="url(#paint0_radial_415_5329)" fill-opacity="0.2" />
+                    fill="url(#paint0_radial_415_5329)"
+                    fill-opacity="0.2"
+                  />
                   <defs>
-                    <radialGradient id="paint0_radial_415_5329" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(251 11) rotate(90) scale(196 251)">
+                    <radialGradient
+                      id="paint0_radial_415_5329"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(251 11) rotate(90) scale(196 251)"
+                    >
                       <stop stop-color="#636AE6" />
                       <stop offset="1" stop-color="#636AE6" stop-opacity="0" />
                     </radialGradient>
                   </defs>
                 </svg>
-                <svg class="features__graph-vector-dashed" width="480px" height="80" viewBox="0 0 502 80" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="features__graph-vector-dashed"
+                  width="480px"
+                  height="80"
+                  viewBox="0 0 502 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M1 14.7027L50.0597 2.85651C65.1041 -0.77619 80.9509 3.76109 91.7929 14.8056L120.99 44.548C146.139 70.1666 187.98 68.2077 210.626 40.3517V40.3517C230.498 15.9063 265.862 10.9261 291.713 28.9322L322.114 50.1081V50.1081C376.714 93.3988 456.07 85.6644 501 32.4054V32.4054"
-                    stroke="#A8B4C5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    stroke-dasharray="4 4" />
+                    stroke="#A8B4C5"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-dasharray="4 4"
+                  />
                 </svg>
               </span>
               <span class="features__graph-list-item-right">126.8</span>
@@ -175,10 +395,12 @@
               <span>30</span>
             </div>
             <span class="features__graph-month">Sep</span>
-            <span class="features__graph-lastday">Last data sync: Feb 4, 2022 (Kemarin) </span>
+            <span class="features__graph-lastday"
+              >Last data sync: Feb 4, 2022 (Kemarin)
+            </span>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
