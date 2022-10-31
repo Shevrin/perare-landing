@@ -1,22 +1,68 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ThisReceiver } from '@angular/compiler';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { BehaviorSubject, fromEvent, map, Observable, Subscription } from 'rxjs';
 import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
-  styleUrls: ['./features.component.sass']
+  styleUrls: ['./features.component.sass'],
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+      transform: 'translateY(0px)'
+      })),
+      state('closed', style({
+        transform: 'translateY(-500px)'
+      })),
+      transition('open => closed', [
+        animate('0.3s ease-in' )
+      ]),
+      transition('closed => open', [
+        animate('0.3s ease-out')
+      ]),
+    ]),
+  ]
 })
-export class FeaturesComponent implements OnInit, AfterViewInit {
+export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
 
+  private positionSubs!: Subscription;
+  private positionTarget: BehaviorSubject<number> = new BehaviorSubject(1);
+
+  public getPosition(): Observable<number> {
+    return this.positionTarget.asObservable()
+  }
+
+
+  @ViewChild('scrollElement', { static: true }) private scrollElement!: ElementRef;
 
   constructor() { }
 
   ngOnInit(): void {
-
+    // fromEvent(this.scrollElement.nativeElement, 'scroll').subscribe((e: Event) => console.log({ scrollPosition: e.target['scrollTop'] }));
+    this.positionSubs = fromEvent(this.scrollElement.nativeElement, 'scroll')
+      .pipe(
+        map((e: any) => (e.target as Element).scrollTop)
+      )
+      .subscribe((position: number) => {
+        if (position) {
+        console.log(`position`, position);
+        this.positionTarget.next(position);
+        }
+      })
   }
+
   ngAfterViewInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.positionSubs.unsubscribe();
+  }
+
+  private getYPosition(e: any): number {
+    return (e.target as Element).scrollTop;
+  }
 }
 //счётчик для 12.000.000+
 // const counterOne = () => {
