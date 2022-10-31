@@ -1,8 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { ThisReceiver } from '@angular/compiler';
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BehaviorSubject, fromEvent, map, Observable, Subscription } from 'rxjs';
-import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-features',
@@ -60,9 +58,9 @@ export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.positionSubs.unsubscribe();
   }
 
-  private getYPosition(e: any): number {
-    return (e.target as Element).scrollTop;
-  }
+  // private getYPosition(e: any): number {
+  //   return (e.target as Element).scrollTop;
+  // }
 }
 //счётчик для 12.000.000+
 // const counterOne = () => {

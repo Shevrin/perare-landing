@@ -1,3 +1,4 @@
+import { trigger, transition, style, animate } from '@angular/animations';
 import { AfterContentInit, Component, ContentChildren, OnInit, QueryList } from '@angular/core';
 import { ITabsIndustries } from '../../interfaces/tabs-industries';
 import { IndustriesBodyItemComponent } from '../industries-body-item/industries-body-item.component';
@@ -5,7 +6,15 @@ import { IndustriesBodyItemComponent } from '../industries-body-item/industries-
 @Component({
   selector: 'app-industries-body-header',
   templateUrl: './industries-body-header.component.html',
-  styleUrls: ['./industries-body-header.component.sass']
+  styleUrls: ['./industries-body-header.component.sass'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({transform: 'translateX(+100%)'}),
+        animate('200ms ease-in', style({transform: 'translateX(0%)'}))
+      ]),
+    ]),
+  ]
 })
 export class IndustriesBodyHeaderComponent implements OnInit, AfterContentInit {
 

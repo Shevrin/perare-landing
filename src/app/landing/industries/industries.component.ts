@@ -3,7 +3,8 @@ import { ITabsIndustries } from '../../interfaces/tabs-industries';
 @Component({
   selector: 'app-industries',
   templateUrl: './industries.component.html',
-  styleUrls: ['./industries.component.sass']
+  styleUrls: ['./industries.component.sass'],
+
 })
 export class IndustriesComponent implements OnInit {
 
