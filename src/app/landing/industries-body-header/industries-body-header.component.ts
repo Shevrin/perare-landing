@@ -7,14 +7,7 @@ import { IndustriesBodyItemComponent } from '../industries-body-item/industries-
   selector: 'app-industries-body-header',
   templateUrl: './industries-body-header.component.html',
   styleUrls: ['./industries-body-header.component.sass'],
-  animations: [
-    trigger('slideInOut', [
-      transition(':enter', [
-        style({transform: 'translateX(+100%)'}),
-        animate('200ms ease-in', style({transform: 'translateX(0%)'}))
-      ]),
-    ]),
-  ]
+  
 })
 export class IndustriesBodyHeaderComponent implements OnInit, AfterContentInit {
 

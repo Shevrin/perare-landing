@@ -1,7 +1,6 @@
 <div
   class="industries__content"
   [ngClass]="{ 'industries__content--active': tab?.selected }"
-  [@slideInOut]="tab?.selected ? 'active' : 'unactive'"
 >
   <ul class="industries__list">
     <li class="industries__item" *ngFor="let item of tab?.list">

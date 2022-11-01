@@ -62,12 +62,12 @@
         </p>
       </div>
 
-      <ng-container *ngIf="getPosition() | async as position">
+      <ng-container >
         <div class="features__box-contetnt">
           <div class="features__box-item">
             <div
               class="features__content"
-              [@openClose]="position < 340 ? 'open' : 'closed'"
+             
             >
               <ul class="features__content-list">
                 <li class="features__content-item">
@@ -140,7 +140,6 @@
           <div class="features__box-item">
             <div
               class="features__graph"
-              [@openClose]="position >= 360 ? 'closed' : 'open'"
             >
               <div class="features__graph-btns">
                 <button class="features__graph-btn">PASAR</button>

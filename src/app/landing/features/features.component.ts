@@ -6,22 +6,7 @@ import { BehaviorSubject, fromEvent, map, Observable, Subscription } from 'rxjs'
   selector: 'app-features',
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.sass'],
-  animations: [
-    trigger('openClose', [
-      state('open', style({
-      transform: 'translateY(0px)'
-      })),
-      state('closed', style({
-        transform: 'translateY(-500px)'
-      })),
-      transition('open => closed', [
-        animate('0.3s ease-in' )
-      ]),
-      transition('closed => open', [
-        animate('0.3s ease-out')
-      ]),
-    ]),
-  ]
+  
 })
 export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
 
