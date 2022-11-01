@@ -1,12 +1,15 @@
 @import '/src/sass/landing/vars'
 
 .header
-  padding: 40px 0 32px
+  padding: 33px 0 32px
 
   &__inner
     display: flex
     justify-content: space-between
-    align-items: center
+    align-items: flex-end
+
+    @media (max-width: 600px)
+      align-items: center
 
   &__inner--open
     .menu
@@ -24,7 +27,7 @@
   &__burger
     width: 16px
     height: 16px
-    margin-left: 20px
+    margin-left: 24px
     position: relative
     z-index: 50
     display: none
@@ -51,15 +54,15 @@
     display: none
 
 .logo
-  width: 150px
-  height: 34px
+  width: 168px
+  height: 32px
   position: relative
   z-index: 50
   display: flex
   align-items: center
 
   &__text
-    margin-left: 8px
+    margin: 4px 0 0 8px
     @media (max-width: 600px)
       display: none
 
@@ -68,6 +71,7 @@
   align-items: center
   margin: 0
   padding: 0
+  font-weight: 500
 
   &__link
     font-size: 16px
@@ -91,12 +95,13 @@
         margin-bottom: 29px
 
   &__btn
-    width: 123px
+    width: 106px
     height: 40px
     background-color: $purple
     border-radius: 8px
-    @extend %Poppins-400
+    font-weight: 500
     font-size: 14px
+    line-height: 25px
     color: $light-grey
     margin-left: 45px
     display: flex
@@ -119,11 +124,14 @@
 
   &__btn--mobile
     display: none
-    width: 123px
+    width: 100px
     height: 40px
     margin-bottom: 0
     margin-left: auto
     flex-shrink: 0
+
+    svg
+      display: none
 
     @media (max-width: 600px)
       display: flex
@@ -150,7 +158,10 @@
     justify-content: flex-end
 
 .last-news
-  margin-top: 11px
+  margin-top: 13px
+
+  @media (max-width: 600px)
+    margin-top: 0
 
   &__inner
     background-color: $black
@@ -158,7 +169,11 @@
     padding: 19px 24px
     display: flex
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
+
+    @media (max-width: 600px)
+      padding: 14px 18px 14px 16px
+      align-items: flex-start
 
   &__info
     color: $white

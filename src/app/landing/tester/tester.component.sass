@@ -1,21 +1,26 @@
 @import '/src/sass/landing/vars'
 .tester
-  padding: 100px 0 64px
+  padding: 132px 0 64px
 
   @media (max-width: 600px)
     padding: 40px 0 34px
     overflow: hidden
+
   &__top
     display: flex
     justify-content: space-between
     align-items: flex-end
     margin-bottom: 43px
+    padding: 0 23px
 
     @media (max-width: 940px)
       flex-wrap: wrap
 
     @media (max-width: 600px)
       margin-bottom: 0
+
+    @media (max-width: 420px)
+      padding: 0
 
   &__title
     @extend %Poppins-600
@@ -28,10 +33,10 @@
     &::before
       content: ''
       position: absolute
-      right: -248px
-      top: -43px
-      width: 238px
-      height: 233px
+      right: -219px
+      top: -26px
+      width: 214px
+      height: 222px
       background-image: url('/../assets/landing/image/vector/tester-arrow.svg')
       background-repeat: no-repeat
       background-size: contain
@@ -61,10 +66,15 @@
 
     @media (max-width: 420px)
       max-width: 240px
+      margin-bottom: 23px
 
       &::before
-        right: -88px
-        top: 131px
+        right: -79px
+        top: 126px
+        width: 99px
+        height: 168px
+        background-image: url('/../assets/landing/image/vector/tester-arrow-mob.svg')
+        transform: rotate(0)
 
   &__title-logo
     display: block
@@ -87,6 +97,7 @@
     font-size: 18px
     line-height: 28px
     color: $dark-grey
+    margin-bottom: 16px
 
     @media (max-width: 940px)
       display: block
@@ -97,7 +108,8 @@
       width: 400px
 
     @media (max-width: 420px)
-      width: 265px
+      width: 220px
+      line-height: 25px
 
   &__btn-mobile
     display: none
