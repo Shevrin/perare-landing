@@ -1,14 +1,14 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { BehaviorSubject, fromEvent, map, Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.sass'],
-  
+
 })
-export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
+export class FeaturesComponent implements OnInit, OnDestroy {
 
   private positionSubs!: Subscription;
   private positionTarget: BehaviorSubject<number> = new BehaviorSubject(1);
@@ -17,12 +17,42 @@ export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.positionTarget.asObservable()
   }
 
+  public mark: boolean = true;
 
   @ViewChild('scrollElement', { static: true }) private scrollElement!: ElementRef;
+  @ViewChild('two', { static: true }) private elem!: ElementRef;
+  @ViewChildren('boxItem', { read: true }) private featuresBLock!: QueryList<ElementRef>;
 
-  constructor() { }
+  @HostListener('window:scroll', ['$event']) private onScroll($event: Event): void {
+    let posTop = this.elem.nativeElement.getBoundingClientRect().top;
+    let clientHalfHeight = this.elem.nativeElement.clientHeight / 2;
+    if (window.innerWidth > 850) {
+
+
+    if (posTop + clientHalfHeight <= window.innerHeight && posTop >= 0) {
+      if (this.mark == true) {
+        // this.renderer.addClass(this.featuresBLock[1], 'features__box-item--visible');
+        // this.renderer.removeClass(this.featuresBLock[0], 'features__box-item--visible');
+
+        this.mark = false;
+      }
+    } else if (posTop < 0) {
+      this.mark = false;
+    } else {
+      if (this.mark == false) {
+        // this.renderer.addClass(this.featuresBLock[0], 'features__box-item--visible');
+        // this.renderer.removeClass(this.featuresBLock[1], 'features__box-item--visible');
+        this.mark = true;
+      }
+    }
+     }
+  }
+
+
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+    // console.log(`this.featuresBLock`, this.featuresBLock);
     // fromEvent(this.scrollElement.nativeElement, 'scroll').subscribe((e: Event) => console.log({ scrollPosition: e.target['scrollTop'] }));
     this.positionSubs = fromEvent(this.scrollElement.nativeElement, 'scroll')
       .pipe(
@@ -30,13 +60,10 @@ export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
       )
       .subscribe((position: number) => {
         if (position) {
-        console.log(`position`, position);
-        this.positionTarget.next(position);
+          console.log(`position`, position);
+          this.positionTarget.next(position);
         }
       })
-  }
-
-  ngAfterViewInit(): void {
   }
 
   ngOnDestroy(): void {
@@ -47,6 +74,8 @@ export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
   //   return (e.target as Element).scrollTop;
   // }
 }
+
+
 //Анимация скролла
 // const scrollAnimation = () => {
 //   let mark = true;
@@ -108,7 +137,7 @@ export class FeaturesComponent implements OnInit, AfterViewInit, OnDestroy {
         // if(marker) {
         //   upNum(12000000, featuresCounter);
         //   marker = false;
-        // }     
+        // }
   //   }
   // });
 // };
