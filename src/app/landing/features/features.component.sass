@@ -1,6 +1,6 @@
 @import '/src/sass/landing/vars'
 .features
-  padding: 64px 0 94px
+  padding: 64px 0 50px
 
   @media (max-width: 420px)
     padding-bottom: 32px
@@ -14,18 +14,26 @@
     max-width: 862px
     margin: 0 auto 56px
 
+    br
+      display: none
+
     @media (max-width: 930px)
       margin-bottom: 40px
 
     @media (max-width: 420px)
-      margin-bottom: 34px
+      margin-bottom: 47px
       font-size: 30px
       line-height: 52px
+      max-width: 272px
+      br
+        display: block
 
   &__body
-    display: flex
-    justify-content: space-between
-    padding: 70px 24px 0
+    // display: flex
+    // justify-content: space-between
+    display: grid
+    grid-template-columns: minmax(200px, 467px) 1fr
+    padding: 100px 24px 0
 
     @media (max-width: 930px)
       padding-top: 50px
@@ -36,27 +44,37 @@
     @media (max-width: 420px)
       padding: 0
 
-  &__body--hide
-    display: none
+  &__wrapper
+    height: 58vh
+
+    @media (max-width: 850px)
+      height: auto
+      &:last-child
+        height: auto
+
+  &__wrapper--two
+    margin: 47px 0 52px 0
+
+    @media (max-width: 850px)
+      margin: 0
+
+  &__wrapper-last
+    height: 50vh
+
+    @media (max-width: 420px)
+      height: 56vh
 
   &__info
-    width: 50%
     display: flex
     flex-direction: column
     align-items: flex-start
-    margin-right: 25px
-    overflow-y: scroll
-    max-height: 467px
-  &__info::-webkit-scrollbar
-    width: 0
-  &__info::-moz-scrollbar
-    width: 0
-
+    margin: 98px 25px 0 0
 
     @media (max-width: 850px)
       width: 100%
       margin-right: 0
       margin-bottom: 54px
+      margin-top: 0
 
   &__info--mr12
     margin-right: 12px
@@ -69,13 +87,17 @@
     color: $purple
     text-transform: uppercase
     display: block
-    margin-bottom: 25px
+    margin-bottom: 21px
 
     @media (max-width: 930px)
       margin-bottom: 15px
 
     @media (max-width: 420px)
       font-size: 16px
+
+  &__info-name-two
+    @media (max-width: 420px)
+      margin-bottom: 7px
 
   &__info-title
     @extend %Poppins-600
@@ -92,6 +114,21 @@
       max-width: 100%
       margin-bottom: 24px
 
+    @media (max-width: 420px)
+      line-height: 48px
+      margin-bottom: 10px
+
+  &__info-title-two
+    @media (max-width: 420px)
+      line-height: 52px
+
+  &__info-subtitle
+    margin-top: 11px
+    max-width: 483px
+
+    @media (max-width: 420px)
+      line-height: 24px
+
   &__info-text,
   &__info-subtitle
     font-size: 18px
@@ -99,10 +136,9 @@
     color: $black
     display: block
     margin-bottom: 35px
-    max-width: 480px
+    max-width: 483px
 
     &:last-child
-      max-width: 492px
       color: $dark-grey
       margin-bottom: 0
 
@@ -128,6 +164,7 @@
       max-width: 100% !important
   &__info-list
     margin-bottom: 40px
+    margin-top: 3px
 
     @media (max-width: 420px)
       margin-bottom: 34px
@@ -135,7 +172,7 @@
   &__info-list-item
     color: #4E6685
     position: relative
-    padding-left: 32px
+    padding-left: 38px
     @extend %Poppins-600
     font-size: 18px
     line-height: 30px
@@ -158,19 +195,56 @@
       font-size: 16px
 
   &__box-contetnt
-    display: block
-    flex-direction: column
-    overflow: hidden
-    width: 50%
-    max-height: 467px
+    position: sticky
+    top: 25vh
+    height: 50vh
+    // width: 50%
+
+    @media (max-width: 850px)
+      position: relative
+      height: auto
+      width: 100%
 
   &__box-item
-    display: block
-    // z-index: 10
-    // overflow-y: hidden
+    position: absolute
     width: 100%
-    height: 100%
+    opacity: 0
+    z-index: -1
+    transition: opacity .3s ease-in
+    svg
+      max-width: 567px
+      width: 100%
+      height: auto
 
+    @media (max-width: 850px)
+      display: none
+
+  &__box-item--visible
+    opacity: 1
+    z-index: 1
+
+  &__box-item--mobile
+    display: none
+    margin: 60px 0 110px
+
+    @media (max-width: 850px)
+      display: block
+
+  &__box-item-graph--mobile
+    display: none
+    margin: 46px auto 0
+    width: 70%
+
+    @media (max-width: 850px)
+      display: block
+      width: 100%
+      svg
+        max-width: 567px
+        width: 100%
+        height: auto
+
+    @media (max-width: 850px)
+      margin-top: 42px
 
   &__content
     display: flex
@@ -190,14 +264,26 @@
     max-width: 272px
     width: 100%
     margin-right: 84px
+    margin-bottom: 32px
     box-shadow: 0px 4px 25px 0px rgb(0 0 0 / 10%)
+    flex-shrink: 0
+
+    &:nth-child(2)
+      margin-bottom: 19px
 
     @media (max-width: 850px)
       margin-right: 40px
 
+    @media (max-width: 550px)
+      flex-shrink: 1
+
     @media (max-width: 420px)
-      max-width: 120px
+      max-width: 138px
       padding: 0 8px
+      margin-bottom: 0
+      &:nth-child(2)
+        max-width: 174px
+        margin-bottom: 0
 
   &__content-item
     padding: 8px 0
@@ -235,8 +321,14 @@
       font-size: 8px
       line-height: 8px
 
+  &__content-item-addres
+    padding: 4px 0
+
   &__content-wrapper
     display: flex
+    margin-right: 98px
+    margin-left: 53px
+    align-self: start
 
     @media (max-width: 850px)
       align-self: flex-start
@@ -245,26 +337,29 @@
       width: 100%
 
     @media (max-width: 420px)
-      margin: 20px 0
+      margin: 8px 0 4px
 
     .features__content-list
       margin-right: 0
 
   &__content-box
     position: relative
-    max-width: 168px
+    max-width: 170px
     width: 100%
-    height: 156px
+    height: 145px
     border: 4px solid $purple
     margin-right: 60px
+    margin-top: 10px
     display: flex
     align-items: center
     justify-content: center
+    flex-shrink: 0
 
     @media (max-width: 420px)
       max-width: 85px
       height: 73px
       border-width: 2px
+      margin: 10px 32px 0 22px
 
   &__content-box-circle
     position: absolute
@@ -456,7 +551,7 @@
       left: -12px
 
   &__content-box-subtext--three
-    bottom: -15px
+    bottom: -19px
     left: 50%
     transform: translateX(-50%)
 
@@ -477,6 +572,7 @@
     font-size: 16px
     line-height: 16px
     color: $black
+    margin-bottom: 10px
 
     @media (max-width: 420px)
       font-size: 12px
@@ -486,7 +582,7 @@
     display: flex
     align-items: center
     width: 100%
-    margin: 33px 0 42px 0
+    margin: 33px 0 42px 14px
 
     @media (max-width: 850px)
       justify-content: space-around
@@ -495,16 +591,23 @@
       flex-direction: column
       align-items: start
 
+    @media (max-width: 420px)
+      margin-left: 0
+      margin-bottom: 38px
+
   &__info-box-item
     display: flex
     align-items: center
     flex-direction: column
 
     &:first-child
-      margin: 0 90px 0 24px
+      margin: 0 76px 0 24px
 
       @media (max-width: 850px)
         margin: 0
+
+      @media (max-width: 420px)
+        margin-bottom: 40px
 
     @media (max-width: 490px)
       align-items: start
@@ -514,9 +617,14 @@
     font-size: 33px
     line-height: 53px
     color: $black
+    width: 180px
+    text-align: center
 
     @media (max-width: 490px)
       color: $purple
+
+    @media (max-width: 490px)
+      text-align: left
 
   &__info-box-first
     width: 160px
@@ -624,7 +732,10 @@
     z-index: 5
 
     @media (max-width: 380px)
-      right: 20px
+      right: 35px
+      width: 8px
+      height: 8px
+      border-width: 2px
 
   &__graph-list-item-right
     font-size: 11px
@@ -649,7 +760,7 @@
 
     @media (max-width: 380px)
       height: 120px
-      top: 0
+      top: -3px
 
   &__graph-vector-dashed
     top: 40px

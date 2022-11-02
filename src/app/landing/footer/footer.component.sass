@@ -2,7 +2,7 @@
 
 .footer
   &__top
-    padding: 29px 0
+    padding: 33px 0
     display: flex
     justify-content: space-between
     align-items: center
@@ -10,6 +10,9 @@
     @media (max-width: 600px)
       flex-direction: column
       align-items: flex-start
+
+    @media (max-width: 420px)
+      padding: 38px 0
 
   &__info
     display: flex
@@ -47,11 +50,14 @@
     &:not(:last-child)
       margin-right: 20px
 
+      @media (max-width: 420px)
+        margin-right: 27px
+
   &__rules
     border-top: $light-grey
     display: flex
     align-items: center
-    padding: 20px 0
+    padding: 14px 0
 
     @media (max-width: 600px)
       flex-wrap: wrap
@@ -63,7 +69,7 @@
     position: relative
 
     &:not(:first-child)
-      padding-left: 12px
+      padding-left: 14px
       cursor: pointer
 
       &::after
@@ -87,11 +93,17 @@
         &::after
           display: none
 
+  &__rules-text
+    br
+      display: none
+      @media (max-width: 420px)
+        display: block
+
   &__rules-link
     color: $dark-grey
 
   &__bottom
-    padding: 20px 0 22px
+    padding: 26px 0 20px
     display: flex
     justify-content: center
     align-items: center
@@ -109,3 +121,4 @@
 
 .logo__text
   margin-left: 8px
+  margin-top: 5px

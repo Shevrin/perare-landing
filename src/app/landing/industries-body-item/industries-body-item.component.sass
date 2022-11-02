@@ -3,7 +3,7 @@
   &__content
     padding-top: 44px
     display: none
-    align-items: center
+    align-items: flex-start
     justify-content: space-between
     margin-left: 56px
 
@@ -15,16 +15,25 @@
       margin-left: 0
       padding-top: 24px
 
+    @media (max-width: 420px)
+      padding-top: 19px
+
   &__content--active
     display: flex
 
   &__list
-    margin-right: 50px
+    max-width: 50%
+    width: 100%
+    margin-right: 46px
+    margin-top: 18px
     @media (max-width: 990px)
       margin-right: 30px
     @media (max-width: 880px)
       margin-right: 0
-      margin-bottom: 30px
+      margin-bottom: 34px
+      margin-top: 0
+    @media (max-width: 420px)
+      max-width: 100%
 
   &__item
     color: $dark-grey
@@ -48,6 +57,11 @@
       .industries__item-name
         margin-bottom: 12px
         display: block
+        @media (max-width: 420px)
+          margin-bottom: 0
+
+    @media (max-width: 420px)
+      padding-left: 36px
 
   &__item-name
     @extend %Poppins-600
@@ -56,6 +70,8 @@
 
     @media (max-width: 420px)
       line-height: 26px
+      width: 186px
+      display: block
 
   &__item-text
     font-size: 16px
@@ -68,8 +84,12 @@
     font-size: 14px
     line-height: 26px
     color: $purple
-    margin: 0 auto 57px 0
-    padding-left: 32px
+    padding-left: 36px
+
+    svg
+      width: 24px
+      height: 24px
+      margin-left: 8px
 
     @media (max-width: 420px)
       display: flex
@@ -87,3 +107,5 @@
       @media (max-width: 880px)
         margin: 0 auto
         max-width: 100%
+    @media (max-width: 420px)
+      margin-top: 56px
